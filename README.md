@@ -16,7 +16,7 @@ rubiks()
     .log("You can also use modifiers, that modify all logs of this instance");
 ```
 
-you can also easily create your own levels
+you can also easily create your own levels...
 
 ```js
 import { rubiks } from "rubiks";
@@ -29,7 +29,7 @@ rubiks()
     .log("hello!", customLevel)
 ```
 
-or your own modifiers
+or your own modifiers...
 
 ```js
 import { rubiks } from "rubiks";

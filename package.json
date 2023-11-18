@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/package.json",
 	"name": "rubiks",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"type": "module",
 	"description": "Rubiks is a 0 dependency extendable logging library for modern applications.",
 	"main": "./lib/index.js",
@@ -9,7 +9,11 @@
 	"keywords": ["logger", "colors", "chalk", "extendable"],
 	"author": "Ángel González Vázquez <contact@angelnext.dev>",
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"provenance": true
+	},
+	"scripts": {
+		"build": "tsc"
 	},
 	"files": ["lib"],
 	"repository": {
@@ -19,5 +23,8 @@
 	"bugs": {
 		"url": "https://github.com/rubiksjs/rubiks/issues"
 	},
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"typescript": "^5.2.2"
+	}
 }
