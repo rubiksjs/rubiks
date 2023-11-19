@@ -34,8 +34,8 @@ or your own modifiers...
 ```js
 import { rubiks } from "rubiks";
 
-function customModifier(self, content) {
-    return `my content: ${content}`
+function customModifier(self) {
+    self.format = `my content: ${self.format}`
 }
 
 rubiks()
