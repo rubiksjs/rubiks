@@ -35,13 +35,13 @@ or your own modifiers...
 import { rubiks } from "rubiks";
 
 function customModifier(self) {
-    self.format = `my content: ${self.format}`
+    return `my content: ${self.format}, and the current level is ${self.level}`
 }
 
 rubiks()
     .use(customModifier)
     .log("testing")
-    .log("more")
+    .error("more")
 ```
 
 
