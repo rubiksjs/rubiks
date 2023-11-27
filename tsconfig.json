@@ -2,6 +2,7 @@
     "$schema": "https://json.schemastore.org/tsconfig.json",
     "compilerOptions": {
         "rootDir": "lib",
+        "target": "ESNext",
         "declaration": true,
         "emitDeclarationOnly": true,
         "allowJs": true,
