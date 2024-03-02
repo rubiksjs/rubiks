@@ -1,7 +1,9 @@
-
 <img src="https://i.imgur.com/XfMdpeC.png" width="200" height="200" />
 
 # Rubiks
+
+[![deno module](https://shield.deno.dev/x/rubiks)](https://deno.land/x/rubiks)
+![NPM Version](https://img.shields.io/npm/v/rubiks)
 
 Rubiks is a 0 dependency extendable logging library for modern applications.
 
@@ -34,10 +36,10 @@ or your own modifiers...
 ```js
 import { rubiks } from "rubiks";
 
-function customModifier(self) {
-    self.format = `my content: ${self.format}, and the current level is ${self.level}`
-
-    return null
+function customModifier(self) { 
+    return (self, content) => {
+        self.format += `${content} `
+    }
 }
 
 rubiks()
