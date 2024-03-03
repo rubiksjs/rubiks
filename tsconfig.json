@@ -1,14 +1,13 @@
 {
-    "$schema": "https://json.schemastore.org/tsconfig.json",
-    "compilerOptions": {
-        "rootDir": "lib",
-        "target": "ESNext",
-        "declaration": true,
-        "emitDeclarationOnly": true,
-        "allowJs": true,
-        "checkJs": true
-    },
-    "include": [
-        "lib"
-    ],
+  "$schema": "https://json.schemastore.org/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "noEmit": true,
+    "allowJs": true,
+    "checkJs": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+  },
 }

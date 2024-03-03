@@ -3,7 +3,6 @@
 # Rubiks
 
 [![deno module](https://shield.deno.dev/x/rubiks)](https://deno.land/x/rubiks)
-![NPM Version](https://img.shields.io/npm/v/rubiks)
 
 Rubiks is a 0 dependency extendable logging library for modern applications.
 
