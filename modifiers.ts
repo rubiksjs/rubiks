@@ -1,7 +1,7 @@
 import { type Level } from "./levels.ts";
 import { type Rubiks } from "./rubiks.ts";
 
-export type Modifier = (self: Rubiks) => Level
+export type Modifier = (self: Rubiks) => Level;
 
 interface NerdIconsModifierOptions {
   error?: boolean;
@@ -49,15 +49,16 @@ export function nerdIcons(
 /**
  * Modifier that adds a date to the start of every log.
  * @param self - The instance
- * @returns A fuction to be executed in every log or null
+ * @returns The level that modifies the dates
  */
-export function withDates(self: Rubiks): Level | null {
+export function withDates(self: Rubiks): Level {
   const c = self.prefixes.all || "";
   return (self: Rubiks, _) => {
     const d = new Date();
 
-    self.prefixes.all = `${c}${self.noColor ? "" : "\x1b[90m"
-      }[${d.toLocaleDateString()} ${d.toLocaleTimeString()}]\x1b[0m `;
+    self.prefixes.all = `${c}${
+      self.noColor ? "" : "\x1b[90m"
+    }[${d.toLocaleDateString()} ${d.toLocaleTimeString()}]\x1b[0m `;
   };
 }
 
@@ -66,7 +67,7 @@ export function withDates(self: Rubiks): Level | null {
  * @param self - The instance
  * @returns A fuction to be executed in every log or null
  */
-export function noColor(self: Rubiks): Level | null {
+export function noColor(self: Rubiks): null {
   self.noColor = true;
   return null;
 }
