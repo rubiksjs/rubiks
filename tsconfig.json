@@ -3,6 +3,9 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
+    "lib": [
+      "ESNext"
+    ],
     "noEmit": true,
     "allowJs": true,
     "checkJs": true,
