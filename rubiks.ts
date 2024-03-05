@@ -9,11 +9,6 @@ import {
 } from "./levels.ts";
 import { type Modifier } from "./modifiers.ts";
 
-export interface Rubiks {
-  format: string;
-  level: string;
-}
-
 interface Global {
   process?: { env: Record<string, string | undefined> }
   Deno?: { noColor: boolean }
