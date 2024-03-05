@@ -10,15 +10,15 @@ import {
 import { type Modifier } from "./modifiers.ts";
 
 interface Global {
-  process?: { env: Record<string, string | undefined> }
-  Deno?: { noColor: boolean }
+  process?: { env: Record<string, string | undefined> };
+  Deno?: { noColor: boolean };
 }
 
 /**
  * Class that represents a rubiks logger, each instance has it's own settings and data.
  * @class
  */
-export class Rubiks implements Rubiks {
+export class Rubiks {
   /** The format string that will end up being used for logging. */
   format: string = "%s";
 
@@ -48,7 +48,9 @@ export class Rubiks implements Rubiks {
 
   constructor() {
     const nc = (globalThis as Global).process?.env?.NO_COLOR;
-    if ((nc === undefined || nc === "") && !(globalThis as Global).Deno?.noColor) return;
+    if (
+      (nc === undefined || nc === "") && !(globalThis as Global).Deno?.noColor
+    ) return;
     this.noColor = true;
   }
 
