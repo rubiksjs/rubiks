@@ -9,10 +9,12 @@ import {
 } from "./levels.ts";
 import { type Modifier } from "./modifiers.ts";
 
-interface Global {
+type G = {
   process?: { env: Record<string, string | undefined> };
   Deno?: { noColor: boolean };
-}
+};
+
+type Fixes = Record<string, string> | { all: string };
 
 /**
  * Class that represents a rubiks logger, each instance has it's own settings and data.
@@ -26,10 +28,10 @@ export class Rubiks {
   level: string = "";
 
   /** The prefixes map to use. */
-  prefixes: { all: string } & Record<string, string> = { all: "" };
+  prefixes: Fixes = { all: "" };
 
   /** The suffixes map to use. */
-  suffixes: { all: string } & Record<string, string> = { all: "" };
+  suffixes: Fixes = { all: "" };
 
   /** Is NO_COLOR enabled? */
   noColor: boolean = false;
@@ -47,10 +49,8 @@ export class Rubiks {
   }
 
   constructor() {
-    const nc = (globalThis as Global).process?.env?.NO_COLOR;
-    if (
-      (nc === undefined || nc === "") && !(globalThis as Global).Deno?.noColor
-    ) return;
+    const nc = (globalThis as G).process?.env?.NO_COLOR;
+    if (!nc && !(globalThis as G).Deno?.noColor) return;
     this.noColor = true;
   }
 

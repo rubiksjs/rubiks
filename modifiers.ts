@@ -12,7 +12,7 @@ interface NerdIconsModifierOptions {
 }
 
 /**
- * Modifier that adds a nerd icon to the default logging levels.
+ * Function that returns a modifier that adds nerd icons to the default logging levels.
  * @param [options] - Set what levels have a nerd icon.
  * @returns {Modifier} The modifier function.
  */
