@@ -1,15 +1,3 @@
-<img src="https://i.imgur.com/XfMdpeC.png" width="200" height="200" />
-
-# Rubiks
-
-[![JSR](https://jsr.io/badges/@rubiks/rubiks)](https://jsr.io/@rubiks/rubiks)
-[![deno module](https://shield.deno.dev/x/rubiks)](https://deno.land/x/rubiks)
-
-## Table of Contents
-
-- [Levels](https://github.com/rubiksjs/rubiks#levels)
-<img src="https://i.imgur.com/XfMdpeC.png" width="200" height="200" />
-
 # Rubiks
 
 * [Levels](https://github.com/rubiksjs/rubiks#levels)
