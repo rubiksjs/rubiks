@@ -2,8 +2,8 @@
 
 # Rubiks
 
-* [Levels](https://github.com/rubiksjs/rubiks#levels)
-* [Modifiers](https://github.com/rubiksjs/rubiks#modifiers)
+* [Levels](https://github.com/rubiksjs/rubiks?tab=readme-ov-file#levels)
+* [Modifiers](https://github.com/rubiksjs/rubiks?tab=readme-ov-file#modifiers)
 
 ---
 
