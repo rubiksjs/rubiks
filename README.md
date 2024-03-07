@@ -1,3 +1,5 @@
+<img src="https://i.imgur.com/XfMdpeC.png" width="200" height="200" />
+
 # Rubiks
 
 * [Levels](https://github.com/rubiksjs/rubiks#levels)
