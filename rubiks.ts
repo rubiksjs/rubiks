@@ -14,8 +14,6 @@ type G = {
   Deno?: { noColor: boolean };
 };
 
-type Fixes = Record<string, string> | { all: string };
-
 /**
  * Class that represents a rubiks logger, each instance has it's own settings and data.
  * @class
@@ -28,10 +26,10 @@ export class Rubiks {
   level: string = "";
 
   /** The prefixes map to use. */
-  prefixes: Fixes = { all: "" };
+  prefixes: Record<string, string> | { all: string } = { all: "" };
 
   /** The suffixes map to use. */
-  suffixes: Fixes = { all: "" };
+  suffixes: Record<string, string> | { all: string } = { all: "" };
 
   /** Is NO_COLOR enabled? */
   noColor: boolean = false;
